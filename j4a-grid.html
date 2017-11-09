@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="j4a-grid">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `j4a-grid`
+     * racial data table
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class J4aGrid extends Polymer.Element {
+      static get is() { return 'j4a-grid'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'j4a-grid'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(J4aGrid.is, J4aGrid);
+  </script>
+</dom-module>
