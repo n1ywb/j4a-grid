@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>j4a-grid demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../j4a-grid.html">
+    <link rel="import" href="../../iron-ajax/iron-ajax.html">
+
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+
+    <style>
+      .centered:not([style-scope]):not(.style-scope) {
+        max-width: inherit;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic j4a-grid demo</h3>
+      <demo-snippet>
+        <dom-bind>
+          <template>
+            <iron-ajax
+              auto
+              url="../tsrd_burlington_pd.json"
+              handle-as="json"
+              last-response="{{data}}"
+            ></iron-ajax>
+            <j4a-grid
+              items='[[data.rows]]'
+            ></j4a-grid>
+          </template>
+        </dom-bind>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

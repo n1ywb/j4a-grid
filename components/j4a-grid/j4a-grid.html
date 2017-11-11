@@ -1,0 +1,244 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../vaadin-grid/vaadin-grid.html">
+<link rel="import" href="../vaadin-grid/vaadin-grid-sorter.html">
+<link rel="import" href="../vaadin-grid/vaadin-grid-filter.html">
+
+
+<dom-module id="j4a-grid">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      .header {
+        @apply(--layout-vertical);
+      }
+    </style>
+    <h2>Burlington PD</h2>
+    <vaadin-grid
+        multi-sort
+        items=[[items]]
+    >
+      <vaadin-grid-column
+        width="80px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="source">
+            <div class='header'>
+              <div class='label'>Source</div>
+              <vaadin-grid-filter path="source" aria-label="Source">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.source]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="140px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="datetime">
+            <div class='header'>
+              <div class='label'>Date/Time</div>
+              <vaadin-grid-filter path="datetime" aria-label="Date/Time">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.datetime]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="90px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="race">
+            <div class='header'>
+              <div class='label'>Race</div>
+              <vaadin-grid-filter path="race" aria-label="Race">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.race]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="80px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="gender">
+            <div class='header'>
+              <div class='label'>Gender</div>
+              <vaadin-grid-filter path="gender" aria-label="Gender">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.gender]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="60px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="age">
+            <div class='header'>
+              <div class='label'>Age</div>
+              <vaadin-grid-filter path="age" aria-label="Age">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.age]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="130px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="reason">
+            <div class='header'>
+              <div class='label'>Reason for Stop</div>
+              <vaadin-grid-filter path="reason" aria-label="Reason for Stop">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.reason]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="100px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="search">
+            <div class='header'>
+              <div class='label'>Search</div>
+              <vaadin-grid-filter path="search" aria-label="Search">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.search]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="130px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="contraband">
+            <div class='header'>
+              <div class='label'>Contraband</div>
+              <vaadin-grid-filter path="contraband" aria-label="Contraband">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.contraband]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="120px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="outcome">
+            <div class='header'>
+              <div class='label'>Outcome</div>
+              <vaadin-grid-filter path="outcome" aria-label="Outcome">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.outcome]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="150px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="violation">
+            <div class='header'>
+              <div class='label'>Violation</div>
+              <vaadin-grid-filter path="violation" aria-label="Violation">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.violation]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="150px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="violation_group">
+            <div class='header'>
+              <div class='label'>Violation Group</div>
+              <vaadin-grid-filter path="violation_group" aria-label="Violation Group">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.violation_group]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="120px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="street">
+            <div class='header'>
+              <div class='label'>Street</div>
+              <vaadin-grid-filter path="street" aria-label="Street">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.street]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="80px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="city">
+            <div class='header'>
+              <div class='label'>City</div>
+              <vaadin-grid-filter path="city" aria-label="City">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.city]]</template>
+      </vaadin-grid-column>
+
+    </vaadin-grid>
+  </template>
+
+  <script>
+    /**
+     * `j4a-grid`
+     * racial data table
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class J4aGrid extends Polymer.Element {
+      static get is() { return 'j4a-grid'; }
+      static get properties() {
+        return {
+          items: {
+            type: Array
+          }
+        };
+      }
+    }
+
+    window.customElements.define(J4aGrid.is, J4aGrid);
+  </script>
+</dom-module>

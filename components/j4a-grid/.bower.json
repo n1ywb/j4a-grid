@@ -1,0 +1,30 @@
+{
+  "name": "j4a-grid",
+  "description": "racial data table",
+  "main": "j4a-grid.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "vaadin-grid": "^3.0.2",
+    "iron-flex-layout": "^2.0.1",
+    "iron-ajax": "^2.0.5"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/n1ywb/j4a-grid",
+  "_release": "7dba39874b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "7dba39874b425ae64add25171df425f3d0bc2ac3"
+  },
+  "_source": "https://github.com/n1ywb/j4a-grid.git",
+  "_target": "master",
+  "_originalSource": "n1ywb/j4a-grid",
+  "_direct": true
+}
