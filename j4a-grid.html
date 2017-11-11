@@ -22,7 +22,7 @@
         items=[[items]]
     >
       <vaadin-grid-column
-        width="90px"
+        width="80px"
       >
         <template class="header">
           <vaadin-grid-sorter path="source">
@@ -37,11 +37,15 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="150px"
+        width="140px"
       >
         <template class="header">
-          <vaadin-grid-sorter path="index">
-            Date
+          <vaadin-grid-sorter path="datetime">
+            <div class='header'>
+              <div class='label'>Date/Time</div>
+              <vaadin-grid-filter path="datetime" aria-label="Date/Time">
+              </vaadin-grid-filter>
+            </div>
           </vaadin-grid-sorter>
         </template>
         <template>[[item.datetime]]</template>
@@ -63,7 +67,7 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="100px"
+        width="80px"
       >
         <template class="header">
           <vaadin-grid-sorter path="gender">
@@ -78,7 +82,7 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="80px"
+        width="60px"
       >
         <template class="header">
           <vaadin-grid-sorter path="age">
@@ -93,7 +97,7 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="150px"
+        width="130px"
       >
         <template class="header">
           <vaadin-grid-sorter path="reason">
@@ -123,7 +127,7 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="150px"
+        width="130px"
       >
         <template class="header">
           <vaadin-grid-sorter path="contraband">
@@ -138,7 +142,7 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="150px"
+        width="120px"
       >
         <template class="header">
           <vaadin-grid-sorter path="outcome">
@@ -171,19 +175,19 @@
         width="150px"
       >
         <template class="header">
-          <vaadin-grid-sorter path="violationGroup">
+          <vaadin-grid-sorter path="violation_group">
             <div class='header'>
               <div class='label'>Violation Group</div>
-              <vaadin-grid-filter path="violationGroup" aria-label="Violation Group">
+              <vaadin-grid-filter path="violation_group" aria-label="Violation Group">
               </vaadin-grid-filter>
             </div>
           </vaadin-grid-sorter>
         </template>
-        <template>[[item.violationGroup]]</template>
+        <template>[[item.violation_group]]</template>
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="100px"
+        width="120px"
       >
         <template class="header">
           <vaadin-grid-sorter path="street">
@@ -198,7 +202,7 @@
       </vaadin-grid-column>
 
       <vaadin-grid-column
-        width="100px"
+        width="80px"
       >
         <template class="header">
           <vaadin-grid-sorter path="city">
