@@ -18,8 +18,24 @@
     </style>
     <h2>Burlington PD</h2>
     <vaadin-grid
+        multi-sort
         items=[[items]]
     >
+      <vaadin-grid-column
+        width="90px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="source">
+            <div class='header'>
+              <div class='label'>Source</div>
+              <vaadin-grid-filter path="source" aria-label="Source">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.source]]</template>
+      </vaadin-grid-column>
+
       <vaadin-grid-column
         width="150px"
       >
@@ -28,10 +44,11 @@
             Date
           </vaadin-grid-sorter>
         </template>
-        <template>[[item.date]]</template>
+        <template>[[item.datetime]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
-        width="100px"
+        width="90px"
       >
         <template class="header">
           <vaadin-grid-sorter path="race">
@@ -44,6 +61,7 @@
         </template>
         <template>[[item.race]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
         width="100px"
       >
@@ -58,8 +76,9 @@
         </template>
         <template>[[item.gender]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
-        width="100px"
+        width="80px"
       >
         <template class="header">
           <vaadin-grid-sorter path="age">
@@ -72,6 +91,7 @@
         </template>
         <template>[[item.age]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
         width="150px"
       >
@@ -86,8 +106,9 @@
         </template>
         <template>[[item.reason]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
-        width="150px"
+        width="100px"
       >
         <template class="header">
           <vaadin-grid-sorter path="search">
@@ -100,6 +121,7 @@
         </template>
         <template>[[item.search]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
         width="150px"
       >
@@ -114,6 +136,7 @@
         </template>
         <template>[[item.contraband]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
         width="150px"
       >
@@ -128,6 +151,7 @@
         </template>
         <template>[[item.outcome]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
         width="150px"
       >
@@ -142,6 +166,7 @@
         </template>
         <template>[[item.violation]]</template>
       </vaadin-grid-column>
+
       <vaadin-grid-column
         width="150px"
       >
@@ -156,6 +181,37 @@
         </template>
         <template>[[item.violationGroup]]</template>
       </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="100px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="street">
+            <div class='header'>
+              <div class='label'>Street</div>
+              <vaadin-grid-filter path="street" aria-label="Street">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.street]]</template>
+      </vaadin-grid-column>
+
+      <vaadin-grid-column
+        width="100px"
+      >
+        <template class="header">
+          <vaadin-grid-sorter path="city">
+            <div class='header'>
+              <div class='label'>City</div>
+              <vaadin-grid-filter path="city" aria-label="City">
+              </vaadin-grid-filter>
+            </div>
+          </vaadin-grid-sorter>
+        </template>
+        <template>[[item.city]]</template>
+      </vaadin-grid-column>
+
     </vaadin-grid>
   </template>
 
